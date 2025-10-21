@@ -97,8 +97,9 @@ class LoginViewModel(private val UsuarioAutenticadoRepository: UsuarioAutenticad
                 when {
                     pass.isBlank() -> {
                         _state.update {
+                            // CORRECCIÓN: actualizar 'clave' en lugar de 'usuario'
                             it.copy(
-                                usuario = pass.trim()
+                                clave = pass.trim()
                             )
                         }
                     }
@@ -107,8 +108,6 @@ class LoginViewModel(private val UsuarioAutenticadoRepository: UsuarioAutenticad
     }
 
      fun executeLogin(body: LoginPayload) = viewModelScope.launch {
-        println("executeLogin llamado con body: $body")
-
         _state.update {
             it.copy(isLoading = true, isButtonEnabled = false)
         }

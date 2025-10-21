@@ -25,6 +25,7 @@ import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -53,6 +54,7 @@ import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
 
+
 @Composable
 fun LoginScreenRoot(
     viewModel: LoginViewModel = koinViewModel(),
@@ -62,10 +64,8 @@ fun LoginScreenRoot(
     LoginScreen(
         state = state,
         onAction = { action ->
-            println("🟡 Acción recibida en LoginScreenRoot: $action")
             when (action) {
                 is LoginAction.OnLoginFormSubmit -> {
-                    println("🟢 Se ejecuta onLoginFormSubmit externo")
                     onLoginFormSubmit(
                         LoginPayload(
                             usuario = action.usuario,
@@ -76,10 +76,10 @@ fun LoginScreenRoot(
                         )
                     )
                 }
-                else -> Unit
+                else -> {
+                    viewModel.onAction(action)
+                }
             }
-            println("🟣 Se llama al ViewModel")
-            viewModel.onAction(action)
         }
     )
 }

@@ -60,8 +60,7 @@ fun PrimaryButtom(
                 disabledContentColor = if (isPrimary) Color(0xFF386497) else Color.White,
             ),
             onClick = {
-                println("🔥 BOTÓN PRESIONADO 🔥")
-                onClick
+                onClick()
             }
         ) {
             AnimatedVisibility(

@@ -14,7 +14,7 @@ import io.ktor.client.request.setBody
 import io.ktor.http.ContentType
 import io.ktor.http.contentType
 
-private const val BASE_URL = "http://190.10.150.187:7232/api"
+private const val BASE_URL = "http://190.10.150.187:7230/api"
 
 class KtorRemoteUserDataSource(
     private val httpClient: HttpClient
@@ -27,6 +27,7 @@ class KtorRemoteUserDataSource(
             httpClient.post(
                 urlString = "$BASE_URL/seguridad/login"
             ){
+                println("Usuario =>"+body.usuario.toString()+"   Clave =>"+ body.clave.toString())
                 contentType(ContentType.Application.Json)
                 setBody(body)
             }

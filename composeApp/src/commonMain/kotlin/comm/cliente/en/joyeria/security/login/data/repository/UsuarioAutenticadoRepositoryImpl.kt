@@ -1,5 +1,6 @@
 package comm.cliente.en.joyeria.security.login.data.repository
 
+import comm.cliente.en.joyeria.core.Util.toBase64
 import comm.cliente.en.joyeria.core.domain.DataError
 import comm.cliente.en.joyeria.core.domain.Result
 import comm.cliente.en.joyeria.core.domain.map
@@ -13,7 +14,9 @@ class UsuarioAutenticadoRepositoryImpl(
     private val remoteUserDataSource: RemoteUsuarioAutenticadoDataSource
 ): UsuarioAutenticadoRepository {
     override suspend fun login(body: LoginPayload): Result<RespuestaLogin, DataError.Remote> {
-        return remoteUserDataSource.login(body).map {
+
+        val bodyModificado = body.copy(clave = body.clave.toBase64())
+        return remoteUserDataSource.login(bodyModificado).map {
             dto -> dto.toDomain()
         }
     }
