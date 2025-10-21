@@ -1,0 +1,7 @@
+TEAM_ID=
+
+PRODUCT_NAME=app-cliente-en-joyeria
+PRODUCT_BUNDLE_IDENTIFIER=comm.cliente.en.joyeria.app-cliente-en-joyeria$(TEAM_ID)
+
+CURRENT_PROJECT_VERSION=1
+MARKETING_VERSION=1.0

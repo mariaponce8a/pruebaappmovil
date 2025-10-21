@@ -1,0 +1,28 @@
+<!--lineas de texto en español-->
+<resources>
+    <string name="razonDeAplicacion">Facilita el proceso de firmas electrónicas de manera cómoda y segura a tus clientes
+    </string>
+    <!--campos-->
+    <string name="user">Usuario</string>
+    <string name="password">Contraseña</string>
+    <!--mensajes-->
+    <string name="placeholderUsuario">Ingrese su usuario</string>
+    <string name="placeholderContrasena">Ingrese su contraseña</string>
+
+    <string name="error_dll">Oops, Parece que tu disco esta lleno.</string>
+    <string name="error_gen">Oops, Ocurrió un error.</string>
+    <string name="error_timeout">Error por timeOut.</string>
+    <string name="error_noNet">Sin internet, porfavor revisa tu conexión.</string>
+    <string name="error_mp">Has realizado muchas peticiones.</string>
+    <string name="error_parse">Error al procesar los datos.</string>
+
+    <!--Mensajes base de datos-->
+    <string name="fcr">Faltan campos requeridos</string>
+
+
+    <!--botones-->
+    <string name="buttomIngresar">INGRESAR</string>
+</resources>
+
+
+
