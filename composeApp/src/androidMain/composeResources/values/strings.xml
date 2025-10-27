@@ -1,0 +1,33 @@
+<!--lineas de texto en ingles-->
+<resources>
+    <string name="razonDeAplicacion">Facilitate the electronic signature process in a comfortable and secure way for your clients
+    </string>
+    <!--campos-->
+    <string name="user">User</string>
+    <string name="password">Password</string>
+    <!--mensajes-->
+    <string name="placeholderUsuario">Enter your user</string>
+    <string name="placeholderContrasena">Enter your password</string>
+
+    <string name="error_dll">Oops, it looks like your disk is full.</string>
+    <string name="error_gen">Oops, an error occurred.</string>
+    <string name="error_timeout">Timeout error.</string>
+    <string name="error_noNet">No internet connection, please check your network.</string>
+    <string name="error_mp">You’ve made too many requests.</string>
+    <string name="error_parse">Error processing data.</string>
+
+    <!--Mensajes base de datos-->
+    <string name="fcr">Required fields missing</string>
+    <string name="uci">Incorrect user or password</string>
+    <string name="ualif">User has reached the limit of failed attempts</string>
+    <string name="ub">Blocked user</string>
+    <string name="une">User not found</string>
+    <string name="dnp">Device not allowed</string>
+    <string name="apierr">An error occurred</string>
+
+    <!--botones-->
+    <string name="buttomIngresar">LOG IN</string>
+</resources>
+
+
+

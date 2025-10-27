@@ -6,7 +6,6 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
-    alias(libs.plugins.kotlinxSerialization)
 }
 
 kotlin {
@@ -15,17 +14,7 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
-
-    listOf(
-        iosArm64(),
-        iosSimulatorArm64()
-    ).forEach { iosTarget ->
-        iosTarget.binaries.framework {
-            baseName = "ComposeApp"
-            isStatic = true
-        }
-    }
-
+    
     sourceSets {
         androidMain.dependencies {
             implementation(compose.preview)
@@ -57,9 +46,6 @@ kotlin {
             implementation(libs.koin.compose.viewmodel)
             implementation(libs.koin.core)
         }
-        iosMain.dependencies {
-            implementation(libs.ktor.client.darwin)
-        }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
@@ -67,11 +53,11 @@ kotlin {
 }
 
 android {
-    namespace = "comm.cliente.en.joyeria"
+    namespace = "org.example.project"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "comm.cliente.en.joyeria"
+        applicationId = "org.example.project"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
@@ -97,7 +83,3 @@ dependencies {
     debugImplementation(compose.uiTooling)
 }
 
-
-compose.resources {
-    publicResClass = true // 👈 genera la clase `Res` para acceder a recursos
-}

@@ -1,4 +1,4 @@
-rootProject.name = "app-cliente-en-joyeria"
+rootProject.name = "app-firma-electronica"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {

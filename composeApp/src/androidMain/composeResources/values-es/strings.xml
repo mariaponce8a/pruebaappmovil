@@ -1,0 +1,26 @@
+<!--lineas de texto en español-->
+<resources>
+    <string name="razonDeAplicacion">Facilita el proceso de firmas electrónicas de manera cómoda y segura a tus clientes
+    </string>
+    <!--campos-->
+    <string name="user">Usuario</string>
+    <string name="password">Contraseña</string>
+    <!--mensajes-->
+    <string name="placeholderUsuario">Ingrese su usuario</string>
+    <string name="placeholderContrasena">Ingrese su contraseña</string>
+
+    <!--Mensajes base de datos-->
+    <string name="fcr">Faltan campos requeridos</string>
+    <string name="uci">Usuario o contraseña incorrectos</string>
+    <string name="ualif">Usuario ha alcanzado el límite de intentos fallidos</string>
+    <string name="ub">Usuario Bloqueado</string>
+    <string name="une">Usuario no encontrado</string>
+    <string name="dnp">Dispositivo no permitido</string>
+    <string name="apierr">Ocurrió un error</string>
+
+    <!--botones-->
+    <string name="buttomIngresar">INGRESAR</string>
+</resources>
+
+
+
