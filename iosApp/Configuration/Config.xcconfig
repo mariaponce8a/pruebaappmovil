@@ -1,0 +1,7 @@
+TEAM_ID=
+
+PRODUCT_NAME=app-firma-digital
+PRODUCT_BUNDLE_IDENTIFIER=org.example.project.app-firma-digital$(TEAM_ID)
+
+CURRENT_PROJECT_VERSION=1
+MARKETING_VERSION=1.0

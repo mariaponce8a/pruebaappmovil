@@ -1,4 +1,4 @@
-rootProject.name = "app-firma-electronica"
+rootProject.name = "app-firma-digital"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
@@ -28,4 +28,6 @@ dependencyResolutionManagement {
     }
 }
 
+// Incluimos el módulo y le decimos dónde está la carpeta
 include(":composeApp")
+project(":composeApp").projectDir = file("composeApp")
